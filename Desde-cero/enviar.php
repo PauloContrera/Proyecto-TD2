@@ -1,6 +1,6 @@
 <?php
 
-$conexion=mysql_connect("localhost", "root","");
+$conexion=mysql_connect("192.168.56.1", "root");
 mysql_select_db("prueba", $conexion);
 mysql_query("SET NAMES 'utf8'");
 
