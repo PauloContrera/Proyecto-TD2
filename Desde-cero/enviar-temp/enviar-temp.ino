@@ -4,13 +4,13 @@
 //-------------------VARIABLES GLOBALES--------------------------
 int contconexion = 0;
 
-const char *ssid = "Gosp";
+const char *ssid = "Gosp_Ext";
 const char *password = "gosp4321";
 
 unsigned long previousMillis = 0;
 
 char host[48];
-String strhost = "192.168.56.1";
+String strhost = "localhost";
 String strurl = "/proyecto-td2/Desde-cero/src/php/main.php";
 String chipid = "";
 

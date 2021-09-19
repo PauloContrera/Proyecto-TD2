@@ -1,27 +1,32 @@
 #include <ESP8266WiFi.h>
 #include <WiFiClient.h> 
+#include <ESP8266WebServer.h> 
+#include <ESP8266HTTPClient.h> 
 
 //-------------------VARIABLES GLOBALES--------------------------
 int contconexion = 0;
-
+int temp=30;
 const char *ssid = "Gosp_Ext";
 const char *password = "gosp4321";
 
 unsigned long previousMillis = 0;
 
 char host[48];
-String strhost = "192.168.56.1/";
-String strurl = "proyecto-td2/Pruebas/sacado-de-yt/";
+String strhost = "192.168.56.1//";
+String strurl = "proyecto-td2/Desde-cero/src/php/main.php";
 String chipid = "";
+String url="http://192.168.56.1/proyecto-td2/Desde-cero/src/php/main.php";
 
 //-------Función para Enviar Datos a la Base de Datos SQL--------
 
 String enviardatos(String datos) {
+  
   String linea = "error";
   WiFiClient client;
   strhost.toCharArray(host, 49);
   if (!client.connect(host, 80)) {
     Serial.println("Fallo de conexion");
+    Serial.println();
     return linea;
   }
 
@@ -51,7 +56,7 @@ String enviardatos(String datos) {
   return linea;
 }
 
-//-------------------------------------------------------------------------
+
 
 void setup() {
 
@@ -68,7 +73,7 @@ void setup() {
   while (WiFi.status() != WL_CONNECTED and contconexion <50) { //Cuenta hasta 50 si no se puede conectar lo cancela
     ++contconexion;
     delay(500);
-    Serial.println(contconexion);
+    Serial.print(".");
   }
   if (contconexion <50) {
       //para usar con ip fija
@@ -90,13 +95,29 @@ void setup() {
 //--------------------------LOOP--------------------------------
 void loop() {
 
-  unsigned long currentMillis = millis();
+  HTTPClient http;
 
-  if (currentMillis - previousMillis >= 10000) { //envia la temperatura cada 10 segundos
-    previousMillis = currentMillis;
-    int analog = analogRead(17);
-    float temp = analog*0.322265625;
-    Serial.println(temp);
-    enviardatos("chipid=" + chipid + "&temperatura=" + String(temp, 2));
-  }
+  http.begin("http://192.168.56.1/proyecto-td2/Desde-cero/src/php/main.php");
+  http.addHeader("Content-Type","application/x-www-form-urlencoded");
+
+  String postData="chipid=Esp&temperatura=55";
+
+  int httpCode = http.POST(postData);
+
+  String respuesta=http.getString();
+
+
+  Serial.println("\n Nuevo envio de datos");
+  Serial.println(postData);
+  Serial.println("\n");
+  Serial.println(httpCode);
+  Serial.println(respuesta);
+
+  http.end();
+
+  delay(10000);
+  
+
+
+ 
 }
