@@ -1,7 +1,5 @@
 <?php
-
 include'conexion.php';
-
 if ($con) {
     echo "Conexion con base de datos exitosa! ";
     
