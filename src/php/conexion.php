@@ -1,7 +1,9 @@
 <?php
-        $user = "id17595763_proyecto";
-        $pass = "BD_temp_ESP8266";
-        $server = "localhost";
-        $db ="id17595763_bd_temp_esp8266";
+
+        //Estos datos fueron modificados, dado que dan ingreso a mi servidor
+        $user = "user";
+        $pass = "pass";
+        $server = "host";
+        $db ="base-de-datos";
         $con = mysqli_connect($server, $user, $pass, $db);
 ?>
