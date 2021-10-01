@@ -1,0 +1,116 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004-007 numerico
+008-00B dato
+00C-00F MAIN.d
+010-013 convertirdato.numero
+010-011 muestra.dato
+012     muestra.i
+013     @delay_ms1.P1
+013     muestra.@SCRATCH1
+014-01D convertirdato.cifras
+01E-027 convertirdato.cifras2
+028     convertirdato.i
+029     convertirdato.j
+02A     convertirdato.aux
+02B     convertirdato.aux2
+02C-02F @SFTOI.P1
+02C-02F @MULFF.P2
+02C     convertirdato.@SCRATCH1
+02D     convertirdato.@SCRATCH2
+02E     @DIV88.P1
+02E     convertirdato.@SCRATCH3
+02F     @DIV88.P1
+02F     convertirdato.@SCRATCH4
+030-033 @ADDFF.P1
+030-033 @MULFF.P2
+030-031 @ITOF.P3
+030     @DIV88.@SCRATCH1
+034-037 @ADDFF.P1
+034     @MULFF.@SCRATCH1
+035     @MULFF.@SCRATCH2
+036     @MULFF.@SCRATCH3
+038     @ADDFF.@SCRATCH1
+039     @ADDFF.@SCRATCH2
+03A     @ADDFF.@SCRATCH3
+03B     @ADDFF.@SCRATCH4
+03C     @ADDFF.@SCRATCH5
+03D     @ADDFF.@SCRATCH6
+03E     @ADDFF.@SCRATCH7
+03F     @ADDFF.@SCRATCH8
+F80     PORTA
+F81     PORTB
+F82     PORTC
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2
+FBB     CCP_2_LOW
+FBC     CCP_2_HIGH
+FBE     CCP_1
+FBE     CCP_1_LOW
+FBF     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P1
+FE9-FEA @WRITE_PROGRAM_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P3
+FE9-FEA @WRITE_PACKED_MEMORY.P4
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+000004  Display.call
+000014  Display.data
+00001E  Columnas.call
+00002E  Columnas.data
+000032  @SFTOI
+00006A  @MULFF
+00015E  @ITOF
+000196  @ADDFF
+000402  @DIV88
+00042A  convertirdato
+000534  @delay_ms1
+00055E  muestra
+000590  @cinit1
+000590  MAIN
+0005B6  @cinit2
+
+Project Directory:
+    P:\wamp64\www\Proyecto-TD2\Proteus\Desde-cero\
+
+Project Files:
+    main.c                                                  [29-sep.-21 16:08  CRC=AB39244A]
+    ..\Pic\desde-cero\main.h                                [29-sep.-21 04:39  CRC=F365C986]
+    ..\..\..\..\..\Program Files (x86)\PICC\Devices\18F2550.h [15-ene.-18 15:57  CRC=9C52E89C]
+
+Source signature=D744BF08
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=A7CD
+
+Units:
+    main (main)
+
+Compiler Settings:
+    Processor:      PIC18F2550
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   main.xsym
+    Errors:      main.err
+    Ext Symbols: main.esym
+    INHX32:      main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.ccspjt
+    Call Tree:   main.tre
+    Statistics:  main.STA
