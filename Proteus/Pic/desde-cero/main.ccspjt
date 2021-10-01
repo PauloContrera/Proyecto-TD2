@@ -1,0 +1,69 @@
+[PROJECT]
+Target=main.hex
+Processor_Text=PIC18F2550
+CCSVerions=5.076
+Compiler=PCH
+CCSVersion=5.076
+[Target Data]
+FileList=main.c
+[Directories]
+Include=
+[P:\wamp64\www\Proyecto-TD2\Proteus\Pic\desde-cero\main]
+Type=4
+[mru-list]
+1=main.c
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=2
+D1=28-09-2021
+D1_L=8
+D1_L1=[69386]Project Opened.
+D1_L2=[69422]Started Editing.
+D1_L3=[69798]Stopped Editing.
+D1_L4=[70023]Started Editing.
+D1_L5=[71085]Stopped Editing.
+D1_L6=[72517]Started Editing.
+D1_L7=[72863]Stopped Editing.
+TotalEdit=74
+TotalDebug=0
+D1_E=15
+D1_D=0
+D1_L8=[73263]Project Closed.
+D2=29-09-2021
+D2_L=16
+D2_L1=[16341]Project Opened.
+D2_L2=[16398]Started Editing.
+D2_L3=[17644]Stopped Editing.
+D2_L4=[18848]Started Editing.
+D2_L5=[20313]Stopped Editing.
+D2_L6=[20340]Started Editing.
+D2_L7=[21197]Stopped Editing.
+D2_L8=[22515]Started Editing.
+D2_L9=[23216]Stopped Editing.
+D2_E=59
+D2_D=0
+D2_L10=[23218]Project Closed.
+D2_L11=[23232]Project Opened.
+D2_L12=[23240]Project Closed.
+D2_L13=[57907]Project Opened.
+D2_L14=[58010]Started Editing.
+D2_L15=[58409]Stopped Editing.
+D2_L16=[60847]Project Closed.
+
+[Opened Files]
+1=main.c
+t1=5
+2=main.h
+t2=1
+Count=1
+[main.c]
+Type=4
+
+[defines]
+buildcount=46
+[Units]
+Count=1
+1=main (main)

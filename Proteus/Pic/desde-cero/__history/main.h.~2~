@@ -1,0 +1,9 @@
+#include <18F2550.h>
+#device ADC=10
+
+#FUSES XT, NOWDT, PUT, NOMCLR,BROWNOUT,NOLVP                    //No Watch Dog Timer
+
+#use delay(internal=4MHz)
+
+
+

@@ -1,0 +1,30 @@
+#include <main.h>
+int contador=0;
+
+BYTE CONST Display[10]={0x080,0x076,0x024,0x030,0x019,0x012,0x002,0x078,0x000,0x018};
+void main()
+{
+   SET_TRIS_C(0000000);
+   PORTB=0;
+   PORTA=0;
+   while(TRUE)
+   {
+   contador=0;
+      WHILE(contador<10)
+      {
+      PORTC=Display[0];
+      //contador++;
+      DELAY_MS(100);
+      
+      }
+   
+   
+      /*BIT_SET(LED);
+      DELAY_MS(100);
+      BIT_CLEAR(LED);
+      DELAY_MS(100);*/
+
+      //TODO: User Code
+   }
+
+}
