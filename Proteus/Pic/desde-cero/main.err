@@ -1,6 +1,0 @@
-Compiling P:\wamp64\www\Proyecto-TD2\Proteus\Pic\desde-cero\main on 29-sep.-21 at 16:08
->>> Warning 240 "main.c" Line 58(12,16): Pointer types do not match
->>> Warning 202 "main.c" Line 54(8,9): Variable never used:   d
-      Memory usage:   ROM=5%      RAM=1% - 3%
-      0 Errors,  2 Warnings.
-Build Successful.

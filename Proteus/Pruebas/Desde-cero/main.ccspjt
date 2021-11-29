@@ -1,0 +1,35 @@
+[PROJECT]
+Target=main.hex
+Processor_Text=PIC18F2550
+CCSVersion=5.025
+Compiler=PCH
+[Target Data]
+FileList=main.c
+[main.c]
+Type=4
+[mru-list]
+1=main.c
+
+[defines]
+buildcount=1
+
+[ProjectLog]
+Days=1
+D1=29-11-2021
+D1_L=4
+D1_L1=[62198]Project Opened.
+D1_L2=[62273]Started Editing.
+D1_L3=[63056]Stopped Editing.
+TotalEdit=14
+TotalDebug=0
+D1_E=14
+D1_D=0
+D1_L4=[63056]Project Closed.
+
+[Opened Files]
+1=main.c
+2=main.h
+3=
+[Units]
+Count=1
+1=main (main)
