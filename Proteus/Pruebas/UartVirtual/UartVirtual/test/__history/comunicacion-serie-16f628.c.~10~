@@ -1,0 +1,12 @@
+#include <16f628a.h>
+#use delay(clock=4000000)
+#use rs232((baud=9600,xmit=pin_b2,rcv=pin_b1,bits=8,stream=PIC)
+void main()
+{
+char a='a';
+
+ for(;;)
+ {
+  fprintf(PIC,"%c"); //Manda el caracter al segundo PIC
+ }
+}

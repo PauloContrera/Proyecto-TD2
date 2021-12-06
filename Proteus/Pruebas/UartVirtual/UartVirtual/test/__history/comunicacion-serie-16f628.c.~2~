@@ -1,0 +1,14 @@
+#include <16f628a.h>
+#fuses xt,nowdt
+#use delay(clock=4000000)
+#use rs232(baud=57600,xmit=pin_b2,rcv=pin_b1,bits=8)
+
+void main()
+{
+ char c="A";
+ while(1)
+ {
+  fprintf("%c",c); //Manda el caracter al segundo PIC
+ }
+
+}

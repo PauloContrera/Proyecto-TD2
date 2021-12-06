@@ -1,0 +1,78 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+005     main.i
+006     @delay_ms1.P1
+006     @PRINTF_D_300_31766_31767.P2
+006     @PSTRINGCN_300_31766_31767.P3
+007     @PRINTF_D_300_31766_31767.P1
+007     @PSTRINGCN_300_31766_31767.@SCRATCH1
+008     @PSTRINGCN_300_31766_31767.@SCRATCH2
+008     @PRINTF_D_300_31766_31767.@SCRATCH1
+009     @PRINTF_D_300_31766_31767.@SCRATCH2
+00A     @PRINTF_D_300_31766_31767.@SCRATCH3
+00B     @PRINTF_D_300_31766_31767.@SCRATCH4
+00C     @DIV88.P1
+00D     @DIV88.P1
+00E     @DIV88.@SCRATCH1
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2
+FBB     CCP_2_LOW
+FBC     CCP_2_HIGH
+FBE     CCP_1
+FBE     CCP_1_LOW
+FBF     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P1
+FE9-FEA @WRITE_PROGRAM_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P3
+FE9-FEA @READ_PROGRAM_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+000004  @const639.call
+000014  @PSTRINGCN_300_31766_31767
+000036  @DIV88
+00005E  @PRINTF_D_300_31766_31767
+000112  @delay_ms1
+00012C  main
+00012C  @cinit1
+00014E  @cinit2
+
+Project Directory:
+    P:\wamp64\www\Proyecto-TD2\Proteus\Pruebas\UartVirtual\UartVirtual\test\
+
+Project Files:
+    comunicacion-serie-16f628.c                             [02-dic.-21 05:23  CRC=D872A938]
+    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18f2550.h [18-abr.-14 16:56  CRC=63CCCE37]
+
+Source signature=A00C45A6
+
+Units:
+    comunicacion-serie-16f628 (main)
+
+Compiler Settings:
+    Processor:      PIC18F2550
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   comunicacion-serie-16f628.xsym
+    Errors:      comunicacion-serie-16f628.err
+    Ext Symbols: comunicacion-serie-16f628.esym
+    INHX32:      comunicacion-serie-16f628.hex
+    Symbols:     comunicacion-serie-16f628.sym
+    List:        comunicacion-serie-16f628.lst
+    Debug/COFF:  comunicacion-serie-16f628.cof
+    Project:     comunicacion-serie-16f628.ccspjt
+    Call Tree:   comunicacion-serie-16f628.tre
+    Statistics:  comunicacion-serie-16f628.STA
