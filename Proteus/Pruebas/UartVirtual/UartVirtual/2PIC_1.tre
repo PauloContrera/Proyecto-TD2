@@ -1,8 +1,0 @@
-юд2PIC_1
-   юдmain  0/54  Ram=1
-      цд@cinit1  (Inline)  Ram=0
-      цд@PSTRINGC7_622  0/88  Ram=4
-      Ё  цд@PUTCHAR_2_  0/34  Ram=1
-      Ё  юд@PUTCHAR_2_  0/34  Ram=1
-      цд@GETCH_2_  0/39  Ram=1
-      юд@PUTCHAR_2_  0/34  Ram=1

@@ -1,0 +1,919 @@
+CCS PCH C Compiler, Version 5.025, 61357               22-dic.-21 17:33
+
+               Filename:   P:\wamp64\www\Proyecto-TD2\Plan Z\main.lst
+
+               ROM used:   1692 bytes (5%)
+                           Largest free fragment is 31076
+               RAM used:   18 (1%) at main() level
+                           69 (3%) worst case
+               Stack used: 1 locations
+               Stack size: 31
+
+*
+0000:  GOTO   05B6
+.................... #include <main.h> 
+.................... #include <18F2550.h> 
+.................... //////////// Standard Header file for the PIC18F2550 device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2013 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC18F2550 
+0004:  CLRF   FF7
+0006:  ADDLW  14
+0008:  MOVWF  FF6
+000A:  MOVLW  00
+000C:  ADDWFC FF7,F
+000E:  TBLRD*+
+0010:  MOVF   FF5,W
+0012:  RETURN 0
+0014:  DATA 20,73
+0016:  DATA 82,42
+0018:  DATA 51,44
+001A:  DATA 04,72
+001C:  DATA 00,50
+001E:  CLRF   FF7
+0020:  ADDLW  2E
+0022:  MOVWF  FF6
+0024:  MOVLW  00
+0026:  ADDWFC FF7,F
+0028:  TBLRD*+
+002A:  MOVF   FF5,W
+002C:  RETURN 0
+002E:  DATA 20,70
+0030:  DATA 80,40
+0032:  DATA 50,40
+0034:  DATA 00,70
+0036:  DATA 00,50
+0038:  CLRF   FF7
+003A:  ADDLW  48
+003C:  MOVWF  FF6
+003E:  MOVLW  00
+0040:  ADDWFC FF7,F
+0042:  TBLRD*+
+0044:  MOVF   FF5,W
+0046:  RETURN 0
+0048:  DATA 24,10
+004A:  DATA 05,0C
+*
+0074:  MOVLW  8E
+0076:  MOVWF  00
+0078:  MOVFF  36,01
+007C:  MOVFF  35,02
+0080:  CLRF   03
+0082:  MOVF   01,F
+0084:  BNZ   0098
+0086:  MOVFF  02,01
+008A:  CLRF   02
+008C:  MOVLW  08
+008E:  SUBWF  00,F
+0090:  MOVF   01,F
+0092:  BNZ   0098
+0094:  CLRF   00
+0096:  BRA    00A8
+0098:  BCF    FD8.0
+009A:  BTFSC  01.7
+009C:  BRA    00A6
+009E:  RLCF   02,F
+00A0:  RLCF   01,F
+00A2:  DECF   00,F
+00A4:  BRA    0098
+00A6:  BCF    01.7
+00A8:  RETURN 0
+00AA:  MOVF   31,W
+00AC:  BTFSC  FD8.2
+00AE:  BRA    0192
+00B0:  MOVWF  00
+00B2:  MOVF   35,W
+00B4:  BTFSC  FD8.2
+00B6:  BRA    0192
+00B8:  ADDWF  00,F
+00BA:  BNC   00C4
+00BC:  MOVLW  81
+00BE:  ADDWF  00,F
+00C0:  BC    0192
+00C2:  BRA    00CC
+00C4:  MOVLW  7F
+00C6:  SUBWF  00,F
+00C8:  BNC   0192
+00CA:  BZ    0192
+00CC:  MOVFF  32,39
+00D0:  MOVF   36,W
+00D2:  XORWF  39,F
+00D4:  BSF    32.7
+00D6:  BSF    36.7
+00D8:  MOVF   34,W
+00DA:  MULWF  38
+00DC:  MOVFF  FF4,3B
+00E0:  MOVF   33,W
+00E2:  MULWF  37
+00E4:  MOVFF  FF4,03
+00E8:  MOVFF  FF3,3A
+00EC:  MULWF  38
+00EE:  MOVF   FF3,W
+00F0:  ADDWF  3B,F
+00F2:  MOVF   FF4,W
+00F4:  ADDWFC 3A,F
+00F6:  MOVLW  00
+00F8:  ADDWFC 03,F
+00FA:  MOVF   34,W
+00FC:  MULWF  37
+00FE:  MOVF   FF3,W
+0100:  ADDWF  3B,F
+0102:  MOVF   FF4,W
+0104:  ADDWFC 3A,F
+0106:  MOVLW  00
+0108:  CLRF   02
+010A:  ADDWFC 03,F
+010C:  ADDWFC 02,F
+010E:  MOVF   32,W
+0110:  MULWF  38
+0112:  MOVF   FF3,W
+0114:  ADDWF  3A,F
+0116:  MOVF   FF4,W
+0118:  ADDWFC 03,F
+011A:  MOVLW  00
+011C:  ADDWFC 02,F
+011E:  MOVF   32,W
+0120:  MULWF  37
+0122:  MOVF   FF3,W
+0124:  ADDWF  03,F
+0126:  MOVF   FF4,W
+0128:  ADDWFC 02,F
+012A:  MOVLW  00
+012C:  CLRF   01
+012E:  ADDWFC 01,F
+0130:  MOVF   34,W
+0132:  MULWF  36
+0134:  MOVF   FF3,W
+0136:  ADDWF  3A,F
+0138:  MOVF   FF4,W
+013A:  ADDWFC 03,F
+013C:  MOVLW  00
+013E:  ADDWFC 02,F
+0140:  ADDWFC 01,F
+0142:  MOVF   33,W
+0144:  MULWF  36
+0146:  MOVF   FF3,W
+0148:  ADDWF  03,F
+014A:  MOVF   FF4,W
+014C:  ADDWFC 02,F
+014E:  MOVLW  00
+0150:  ADDWFC 01,F
+0152:  MOVF   32,W
+0154:  MULWF  36
+0156:  MOVF   FF3,W
+0158:  ADDWF  02,F
+015A:  MOVF   FF4,W
+015C:  ADDWFC 01,F
+015E:  INCF   00,F
+0160:  BTFSC  01.7
+0162:  BRA    016E
+0164:  RLCF   3A,F
+0166:  RLCF   03,F
+0168:  RLCF   02,F
+016A:  RLCF   01,F
+016C:  DECF   00,F
+016E:  MOVLW  00
+0170:  BTFSS  3A.7
+0172:  BRA    0188
+0174:  INCF   03,F
+0176:  ADDWFC 02,F
+0178:  ADDWFC 01,F
+017A:  MOVF   01,W
+017C:  BNZ   0188
+017E:  MOVF   02,W
+0180:  BNZ   0188
+0182:  MOVF   03,W
+0184:  BNZ   0188
+0186:  INCF   00,F
+0188:  BTFSC  39.7
+018A:  BSF    01.7
+018C:  BTFSS  39.7
+018E:  BCF    01.7
+0190:  BRA    019A
+0192:  CLRF   00
+0194:  CLRF   01
+0196:  CLRF   02
+0198:  CLRF   03
+019A:  RETURN 0
+019C:  MOVLW  80
+019E:  BTFSC  FD8.1
+01A0:  XORWF  3A,F
+01A2:  CLRF   3F
+01A4:  CLRF   40
+01A6:  MOVFF  36,3E
+01AA:  MOVF   3A,W
+01AC:  XORWF  3E,F
+01AE:  MOVF   35,W
+01B0:  BTFSC  FD8.2
+01B2:  BRA    036C
+01B4:  MOVWF  3D
+01B6:  MOVWF  00
+01B8:  MOVF   39,W
+01BA:  BTFSC  FD8.2
+01BC:  BRA    037E
+01BE:  SUBWF  3D,F
+01C0:  BTFSC  FD8.2
+01C2:  BRA    02C6
+01C4:  BNC   0240
+01C6:  MOVFF  3A,43
+01CA:  BSF    43.7
+01CC:  MOVFF  3B,42
+01D0:  MOVFF  3C,41
+01D4:  CLRF   40
+01D6:  BCF    FD8.0
+01D8:  RRCF   43,F
+01DA:  RRCF   42,F
+01DC:  RRCF   41,F
+01DE:  RRCF   40,F
+01E0:  DECFSZ 3D,F
+01E2:  BRA    01D4
+01E4:  BTFSS  3E.7
+01E6:  BRA    01EE
+01E8:  BSF    3F.0
+01EA:  BRA    03A6
+01EC:  BCF    3F.0
+01EE:  BCF    3D.0
+01F0:  BSF    3F.4
+01F2:  CLRF   FEA
+01F4:  MOVLW  38
+01F6:  MOVWF  FE9
+01F8:  BRA    03CC
+01FA:  BCF    3F.4
+01FC:  BTFSC  3E.7
+01FE:  BRA    0214
+0200:  BTFSS  3D.0
+0202:  BRA    022A
+0204:  RRCF   43,F
+0206:  RRCF   42,F
+0208:  RRCF   41,F
+020A:  RRCF   40,F
+020C:  INCF   00,F
+020E:  BTFSC  FD8.2
+0210:  BRA    039C
+0212:  BRA    022A
+0214:  BTFSC  43.7
+0216:  BRA    0230
+0218:  BCF    FD8.0
+021A:  RLCF   40,F
+021C:  RLCF   41,F
+021E:  RLCF   42,F
+0220:  RLCF   43,F
+0222:  DECF   00,F
+0224:  BTFSC  FD8.2
+0226:  BRA    039C
+0228:  BRA    0214
+022A:  BSF    3F.6
+022C:  BRA    0304
+022E:  BCF    3F.6
+0230:  MOVFF  36,3E
+0234:  BTFSS  36.7
+0236:  BRA    023C
+0238:  BSF    43.7
+023A:  BRA    038E
+023C:  BCF    43.7
+023E:  BRA    038E
+0240:  MOVFF  39,3D
+0244:  MOVFF  39,00
+0248:  MOVF   35,W
+024A:  SUBWF  3D,F
+024C:  MOVFF  36,43
+0250:  BSF    43.7
+0252:  MOVFF  37,42
+0256:  MOVFF  38,41
+025A:  CLRF   40
+025C:  BCF    FD8.0
+025E:  RRCF   43,F
+0260:  RRCF   42,F
+0262:  RRCF   41,F
+0264:  RRCF   40,F
+0266:  DECFSZ 3D,F
+0268:  BRA    025A
+026A:  BTFSS  3E.7
+026C:  BRA    0274
+026E:  BSF    3F.1
+0270:  BRA    03A6
+0272:  BCF    3F.1
+0274:  BCF    3D.0
+0276:  BSF    3F.5
+0278:  CLRF   FEA
+027A:  MOVLW  3C
+027C:  MOVWF  FE9
+027E:  BRA    03CC
+0280:  BCF    3F.5
+0282:  BTFSC  3E.7
+0284:  BRA    029A
+0286:  BTFSS  3D.0
+0288:  BRA    02B0
+028A:  RRCF   43,F
+028C:  RRCF   42,F
+028E:  RRCF   41,F
+0290:  RRCF   40,F
+0292:  INCF   00,F
+0294:  BTFSC  FD8.2
+0296:  BRA    039C
+0298:  BRA    02B0
+029A:  BTFSC  43.7
+029C:  BRA    02B6
+029E:  BCF    FD8.0
+02A0:  RLCF   40,F
+02A2:  RLCF   41,F
+02A4:  RLCF   42,F
+02A6:  RLCF   43,F
+02A8:  DECF   00,F
+02AA:  BTFSC  FD8.2
+02AC:  BRA    039C
+02AE:  BRA    029A
+02B0:  BSF    3F.7
+02B2:  BRA    0304
+02B4:  BCF    3F.7
+02B6:  MOVFF  3A,3E
+02BA:  BTFSS  3A.7
+02BC:  BRA    02C2
+02BE:  BSF    43.7
+02C0:  BRA    038E
+02C2:  BCF    43.7
+02C4:  BRA    038E
+02C6:  MOVFF  3A,43
+02CA:  BSF    43.7
+02CC:  MOVFF  3B,42
+02D0:  MOVFF  3C,41
+02D4:  BTFSS  3E.7
+02D6:  BRA    02E0
+02D8:  BCF    43.7
+02DA:  BSF    3F.2
+02DC:  BRA    03A6
+02DE:  BCF    3F.2
+02E0:  CLRF   40
+02E2:  BCF    3D.0
+02E4:  CLRF   FEA
+02E6:  MOVLW  38
+02E8:  MOVWF  FE9
+02EA:  BRA    03CC
+02EC:  BTFSC  3E.7
+02EE:  BRA    0328
+02F0:  MOVFF  36,3E
+02F4:  BTFSS  3D.0
+02F6:  BRA    0304
+02F8:  RRCF   43,F
+02FA:  RRCF   42,F
+02FC:  RRCF   41,F
+02FE:  RRCF   40,F
+0300:  INCF   00,F
+0302:  BZ    039C
+0304:  BTFSS  40.7
+0306:  BRA    031E
+0308:  INCF   41,F
+030A:  BNZ   031E
+030C:  INCF   42,F
+030E:  BNZ   031E
+0310:  INCF   43,F
+0312:  BNZ   031E
+0314:  RRCF   43,F
+0316:  RRCF   42,F
+0318:  RRCF   41,F
+031A:  INCF   00,F
+031C:  BZ    039C
+031E:  BTFSC  3F.6
+0320:  BRA    022E
+0322:  BTFSC  3F.7
+0324:  BRA    02B4
+0326:  BRA    0360
+0328:  MOVLW  80
+032A:  XORWF  43,F
+032C:  BTFSS  43.7
+032E:  BRA    0338
+0330:  BRA    03A6
+0332:  MOVFF  3A,3E
+0336:  BRA    034C
+0338:  MOVFF  36,3E
+033C:  MOVF   43,F
+033E:  BNZ   034C
+0340:  MOVF   42,F
+0342:  BNZ   034C
+0344:  MOVF   41,F
+0346:  BNZ   034C
+0348:  CLRF   00
+034A:  BRA    038E
+034C:  BTFSC  43.7
+034E:  BRA    0360
+0350:  BCF    FD8.0
+0352:  RLCF   40,F
+0354:  RLCF   41,F
+0356:  RLCF   42,F
+0358:  RLCF   43,F
+035A:  DECFSZ 00,F
+035C:  BRA    034C
+035E:  BRA    039C
+0360:  BTFSS  3E.7
+0362:  BRA    0368
+0364:  BSF    43.7
+0366:  BRA    038E
+0368:  BCF    43.7
+036A:  BRA    038E
+036C:  MOVFF  39,00
+0370:  MOVFF  3A,43
+0374:  MOVFF  3B,42
+0378:  MOVFF  3C,41
+037C:  BRA    038E
+037E:  MOVFF  35,00
+0382:  MOVFF  36,43
+0386:  MOVFF  37,42
+038A:  MOVFF  38,41
+038E:  MOVFF  43,01
+0392:  MOVFF  42,02
+0396:  MOVFF  41,03
+039A:  BRA    0404
+039C:  CLRF   00
+039E:  CLRF   01
+03A0:  CLRF   02
+03A2:  CLRF   03
+03A4:  BRA    0404
+03A6:  CLRF   40
+03A8:  COMF   41,F
+03AA:  COMF   42,F
+03AC:  COMF   43,F
+03AE:  COMF   40,F
+03B0:  INCF   40,F
+03B2:  BNZ   03BE
+03B4:  INCF   41,F
+03B6:  BNZ   03BE
+03B8:  INCF   42,F
+03BA:  BNZ   03BE
+03BC:  INCF   43,F
+03BE:  BTFSC  3F.0
+03C0:  BRA    01EC
+03C2:  BTFSC  3F.1
+03C4:  BRA    0272
+03C6:  BTFSC  3F.2
+03C8:  BRA    02DE
+03CA:  BRA    0332
+03CC:  MOVF   FEF,W
+03CE:  ADDWF  41,F
+03D0:  BNC   03DC
+03D2:  INCF   42,F
+03D4:  BNZ   03DC
+03D6:  INCF   43,F
+03D8:  BTFSC  FD8.2
+03DA:  BSF    3D.0
+03DC:  MOVF   FED,F
+03DE:  MOVF   FEF,W
+03E0:  ADDWF  42,F
+03E2:  BNC   03EA
+03E4:  INCF   43,F
+03E6:  BTFSC  FD8.2
+03E8:  BSF    3D.0
+03EA:  MOVF   FED,F
+03EC:  MOVF   FEF,W
+03EE:  BTFSC  FEF.7
+03F0:  BRA    03F4
+03F2:  XORLW  80
+03F4:  ADDWF  43,F
+03F6:  BTFSC  FD8.0
+03F8:  BSF    3D.0
+03FA:  BTFSC  3F.4
+03FC:  BRA    01FA
+03FE:  BTFSC  3F.5
+0400:  BRA    0280
+0402:  BRA    02EC
+0404:  RETURN 0
+0406:  MOVLW  8E
+0408:  MOVWF  00
+040A:  MOVF   31,W
+040C:  SUBWF  00,F
+040E:  MOVFF  32,02
+0412:  MOVFF  33,01
+0416:  BSF    02.7
+0418:  MOVF   00,F
+041A:  BZ    042E
+041C:  BCF    FD8.0
+041E:  MOVF   02,F
+0420:  BNZ   0426
+0422:  MOVF   01,F
+0424:  BZ    042E
+0426:  RRCF   02,F
+0428:  RRCF   01,F
+042A:  DECFSZ 00,F
+042C:  BRA    041C
+042E:  BTFSS  32.7
+0430:  BRA    043C
+0432:  COMF   01,F
+0434:  COMF   02,F
+0436:  INCF   01,F
+0438:  BTFSC  FD8.2
+043A:  INCF   02,F
+043C:  RETURN 0
+043E:  MOVF   34,W
+0440:  CLRF   01
+0442:  SUBWF  33,W
+0444:  BC    044C
+0446:  MOVFF  33,00
+044A:  BRA    0464
+044C:  CLRF   00
+044E:  MOVLW  08
+0450:  MOVWF  35
+0452:  RLCF   33,F
+0454:  RLCF   00,F
+0456:  MOVF   34,W
+0458:  SUBWF  00,W
+045A:  BTFSC  FD8.0
+045C:  MOVWF  00
+045E:  RLCF   01,F
+0460:  DECFSZ 35,F
+0462:  BRA    0452
+0464:  RETURN 0
+....................  
+.................... #list 
+....................  
+.................... #device ADC=10 
+.................... #FUSES XT, NOWDT, PUT, NOMCLR,BROWNOUT,NOLVP                    //No Watch Dog Timer 
+.................... //#use delay(internal=4MHz) 
+.................... #use delay(internal=4Mhz,clock_out) 
+*
+004C:  CLRF   FEA
+004E:  MOVLW  18
+0050:  MOVWF  FE9
+0052:  MOVF   FEF,W
+0054:  BZ    0072
+0056:  MOVLW  01
+0058:  MOVWF  01
+005A:  CLRF   00
+005C:  DECFSZ 00,F
+005E:  BRA    005C
+0060:  DECFSZ 01,F
+0062:  BRA    005A
+0064:  MOVLW  4A
+0066:  MOVWF  00
+0068:  DECFSZ 00,F
+006A:  BRA    0068
+006C:  BRA    006E
+006E:  DECFSZ FEF,F
+0070:  BRA    0056
+0072:  RETURN 0
+....................  
+....................  
+.................... BYTE CONST Display[10]={0x020,0x073,0x082,0x042,0x051,0x044,0x004,0x072,0x000,0x050}; 
+.................... BYTE CONST DisplayB[10]={0x020,0x070,0x080,0x040,0x050,0x040,0x000,0x070,0x000,0x050}; 
+.................... BYTE CONST ColumnasA[4]={0x024,0x010,0x005,0x00C}; 
+.................... //BYTE CONST ColumnasB[4]={0x004,0x000,0x004,0x014}; 
+....................  
+....................  
+.................... BYTE CONST Leds[8]={0x000,0x004,0x002,0x006,0x001,0x005,0x003,0x007}; 
+.................... int dato[4]; 
+....................  
+.................... #DEFINE LED PORTB,0 
+.................... #byte PORTC= 0xf82 
+.................... #byte PORTB= 0xf81 
+.................... #byte PORTA= 0xf80 
+....................  
+.................... #byte TRISA=0xf92  
+....................  
+....................  
+.................... void muestra(int dato[4]){ 
+.................... for (int i=0;i<4;i++) { 
+*
+0570:  CLRF   17
+0572:  MOVF   17,W
+0574:  SUBLW  03
+0576:  BNC   05B2
+....................          PORTA=ColumnasA[i]; 
+0578:  CLRF   03
+057A:  MOVF   17,W
+057C:  RCALL  0038
+057E:  MOVWF  F80
+....................          //PORTB=ColumnasB[i]; 
+....................          PORTC=Display[dato[i]]; 
+0580:  MOVF   17,W
+0582:  ADDWF  15,W
+0584:  MOVWF  FE9
+0586:  MOVLW  00
+0588:  ADDWFC 16,W
+058A:  MOVWF  FEA
+058C:  CLRF   03
+058E:  MOVF   FEF,W
+0590:  RCALL  0004
+0592:  MOVWF  F82
+....................          PORTB=DisplayB[dato[i]]; 
+0594:  MOVF   17,W
+0596:  ADDWF  15,W
+0598:  MOVWF  FE9
+059A:  MOVLW  00
+059C:  ADDWFC 16,W
+059E:  MOVWF  FEA
+05A0:  CLRF   03
+05A2:  MOVF   FEF,W
+05A4:  RCALL  001E
+05A6:  MOVWF  F81
+....................          DELAY_MS(1); 
+05A8:  MOVLW  01
+05AA:  MOVWF  18
+05AC:  RCALL  004C
+05AE:  INCF   17,F
+05B0:  BRA    0572
+....................    } 
+....................    return; 
+05B2:  GOTO   0698 (RETURN)
+.................... } 
+.................... void convertirdato(float numero){ 
+*
+0466:  CLRF   2D
+0468:  CLRF   2E
+046A:  CLRF   2F
+046C:  CLRF   30
+....................  
+.................... int cifras[10]; 
+....................    int cifras2[10]; 
+....................    int i=0; 
+....................    int j=0; 
+....................    int aux=0; 
+....................    int aux2=0; 
+....................     
+....................    aux=numero; 
+046E:  MOVFF  18,34
+0472:  MOVFF  17,33
+0476:  MOVFF  16,32
+047A:  MOVFF  15,31
+047E:  RCALL  0406
+0480:  MOVFF  01,2F
+....................    aux2=(numero*100)-(aux*100); 
+0484:  MOVFF  18,34
+0488:  MOVFF  17,33
+048C:  MOVFF  16,32
+0490:  MOVFF  15,31
+0494:  CLRF   38
+0496:  CLRF   37
+0498:  MOVLW  48
+049A:  MOVWF  36
+049C:  MOVLW  85
+049E:  MOVWF  35
+04A0:  RCALL  00AA
+04A2:  MOVFF  03,34
+04A6:  MOVFF  02,33
+04AA:  MOVFF  01,32
+04AE:  MOVFF  00,31
+04B2:  MOVF   2F,W
+04B4:  MULLW  64
+04B6:  MOVF   FF3,W
+04B8:  CLRF   36
+04BA:  MOVWF  35
+04BC:  RCALL  0074
+04BE:  BSF    FD8.1
+04C0:  MOVFF  34,38
+04C4:  MOVFF  33,37
+04C8:  MOVFF  32,36
+04CC:  MOVFF  31,35
+04D0:  MOVFF  03,3C
+04D4:  MOVFF  02,3B
+04D8:  MOVFF  01,3A
+04DC:  MOVFF  00,39
+04E0:  RCALL  019C
+04E2:  MOVFF  03,34
+04E6:  MOVFF  02,33
+04EA:  MOVFF  01,32
+04EE:  MOVFF  00,31
+04F2:  RCALL  0406
+04F4:  MOVFF  01,30
+....................  
+....................    while (aux2>0) { 
+04F8:  MOVF   30,F
+04FA:  BZ    052A
+....................       cifras2[j]=aux2%10; 
+04FC:  CLRF   03
+04FE:  MOVF   2E,W
+0500:  ADDLW  23
+0502:  MOVWF  FE9
+0504:  MOVLW  00
+0506:  ADDWFC 03,W
+0508:  MOVWF  FEA
+050A:  MOVFF  30,33
+050E:  MOVLW  0A
+0510:  MOVWF  34
+0512:  RCALL  043E
+0514:  MOVFF  00,FEF
+....................       aux2=aux2/10; 
+0518:  MOVFF  30,33
+051C:  MOVLW  0A
+051E:  MOVWF  34
+0520:  RCALL  043E
+0522:  MOVFF  01,30
+....................       j++; 
+0526:  INCF   2E,F
+0528:  BRA    04F8
+....................    } 
+....................    while (aux>0) { 
+052A:  MOVF   2F,F
+052C:  BZ    055C
+....................       cifras[i]=aux%10; 
+052E:  CLRF   03
+0530:  MOVF   2D,W
+0532:  ADDLW  19
+0534:  MOVWF  FE9
+0536:  MOVLW  00
+0538:  ADDWFC 03,W
+053A:  MOVWF  FEA
+053C:  MOVFF  2F,33
+0540:  MOVLW  0A
+0542:  MOVWF  34
+0544:  RCALL  043E
+0546:  MOVFF  00,FEF
+....................       aux=aux/10; 
+054A:  MOVFF  2F,33
+054E:  MOVLW  0A
+0550:  MOVWF  34
+0552:  RCALL  043E
+0554:  MOVFF  01,2F
+....................       i++; 
+0558:  INCF   2D,F
+055A:  BRA    052A
+....................    } 
+....................    dato[0]=cifras[1]; 
+055C:  MOVFF  1A,04
+....................    dato[1]=cifras[0]; 
+0560:  MOVFF  19,05
+....................    dato[2]=cifras2[1]; 
+0564:  MOVFF  24,06
+....................    dato[3]=cifras2[0]; 
+0568:  MOVFF  23,07
+....................  
+....................    return; 
+056C:  GOTO   0690 (RETURN)
+.................... } 
+.................... int convierte(char c){ 
+.................... switch (c) { 
+....................    case '1': return 1; 
+....................        
+....................       break; 
+....................    case '2': return 2; 
+....................        
+....................       break; 
+....................   case '3': return 3; 
+....................        
+....................       break; 
+....................    case '4': return 4; 
+....................        
+....................       break; 
+....................    case '5': return 5; 
+....................        
+....................       break; 
+....................    case '6': return 6; 
+....................        
+....................       break; 
+....................    case '7': return 7; 
+....................        
+....................       break; 
+....................    case '0': return 0; 
+....................        
+....................       break; 
+....................    //default: return 7; 
+....................        
+....................    }; 
+.................... } 
+....................  
+.................... int d[5]; 
+.................... float numero=20; 
+.................... void main(){ 
+*
+05B6:  CLRF   FF8
+05B8:  BCF    FD0.7
+05BA:  MOVLW  60
+05BC:  MOVWF  FD3
+05BE:  MOVF   FD3,W
+05C0:  CLRF   10
+05C2:  CLRF   0F
+05C4:  MOVLW  20
+05C6:  MOVWF  0E
+05C8:  MOVLW  83
+05CA:  MOVWF  0D
+05CC:  MOVF   FC1,W
+05CE:  ANDLW  C0
+05D0:  IORLW  0F
+05D2:  MOVWF  FC1
+05D4:  MOVLW  07
+05D6:  MOVWF  FB4
+....................   SET_TRIS_C(0xff0); 
+05D8:  MOVLW  F0
+05DA:  MOVWF  F94
+....................    SET_TRIS_B(0X00f); 
+05DC:  MOVLW  0F
+05DE:  MOVWF  F93
+....................    SET_TRIS_A(00000000); 
+05E0:  MOVLW  00
+05E2:  MOVWF  F92
+....................    PORTB=0; 
+05E4:  CLRF   F81
+....................    PORTA=0; 
+05E6:  CLRF   F80
+....................    delay_ms(10); 
+05E8:  MOVLW  0A
+05EA:  MOVWF  18
+05EC:  RCALL  004C
+....................    int d[4]; 
+....................    while(TRUE) 
+....................     
+....................    { 
+....................    //numerico=numerico+0.03; 
+....................    //convertirdato(numerico); 
+....................    //muestra(dato); 
+....................     
+....................     
+....................    d[0]=bit_test(PORTB,0); 
+05EE:  CLRF   11
+05F0:  BTFSC  F81.0
+05F2:  INCF   11,F
+....................    d[1]=bit_test(PORTB,1); 
+05F4:  CLRF   12
+05F6:  BTFSC  F81.1
+05F8:  INCF   12,F
+....................    d[2]=bit_test(PORTB,2); 
+05FA:  CLRF   13
+05FC:  BTFSC  F81.2
+05FE:  INCF   13,F
+....................    d[3]=bit_test(PORTB,3); 
+0600:  CLRF   14
+0602:  BTFSC  F81.3
+0604:  INCF   14,F
+....................    d[4]=bit_test(PORTC,6); 
+0606:  CLRF   15
+0608:  BTFSC  F82.6
+060A:  INCF   15,F
+....................     
+....................    numero=22+(d[4]*16+d[3]*8+d[2]*4+d[1]*2+d[0]*1)*0.5; 
+060C:  MOVF   15,W
+060E:  MULLW  10
+0610:  MOVFF  FF3,15
+0614:  MOVF   14,W
+0616:  MULLW  08
+0618:  MOVF   FF3,W
+061A:  ADDWF  15,F
+061C:  MOVF   13,W
+061E:  MULLW  04
+0620:  MOVF   FF3,W
+0622:  ADDWF  15,F
+0624:  BCF    FD8.0
+0626:  RLCF   12,W
+0628:  ADDWF  15,W
+062A:  ADDWF  11,W
+062C:  CLRF   36
+062E:  MOVWF  35
+0630:  RCALL  0074
+0632:  MOVFF  03,34
+0636:  MOVFF  02,33
+063A:  MOVFF  01,32
+063E:  MOVFF  00,31
+0642:  CLRF   38
+0644:  CLRF   37
+0646:  CLRF   36
+0648:  MOVLW  7E
+064A:  MOVWF  35
+064C:  RCALL  00AA
+064E:  BCF    FD8.1
+0650:  CLRF   38
+0652:  CLRF   37
+0654:  MOVLW  30
+0656:  MOVWF  36
+0658:  MOVLW  83
+065A:  MOVWF  35
+065C:  MOVFF  03,3C
+0660:  MOVFF  02,3B
+0664:  MOVFF  01,3A
+0668:  MOVFF  00,39
+066C:  RCALL  019C
+066E:  MOVFF  03,10
+0672:  MOVFF  02,0F
+0676:  MOVFF  01,0E
+067A:  MOVFF  00,0D
+....................    convertirdato(numero); 
+067E:  MOVFF  10,18
+0682:  MOVFF  0F,17
+0686:  MOVFF  0E,16
+068A:  MOVFF  0D,15
+068E:  BRA    0466
+....................    muestra(dato); 
+0690:  CLRF   16
+0692:  MOVLW  04
+0694:  MOVWF  15
+0696:  BRA    0570
+0698:  BRA    05EE
+....................    //delay_ms(10); 
+....................    } 
+....................  
+.................... } 
+....................  
+069A:  SLEEP 
+....................  
+....................  
+
+Configuration Fuses:
+   Word  1: C93F   PLL12 CPUDIV4 USBDIV INTRC FCMEN IESO
+   Word  2: 1E3E   PUT BROWNOUT BORV21 VREGEN NOWDT WDT32768
+   Word  3: 0700   CCP2C1 PBADEN LPT1OSC NOMCLR
+   Word  4: 0081   STVREN NOLVP NOXINST NODEBUG
+   Word  5: C00F   NOPROTECT NOCPB NOCPD
+   Word  6: E00F   NOWRT NOWRTC NOWRTB NOWRTD
+   Word  7: 400F   NOEBTR NOEBTRB

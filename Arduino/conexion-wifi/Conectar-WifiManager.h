@@ -6,9 +6,9 @@
 #include <Ticker.h>
 
 #define pinLedWifi D4
-#define LedA D1
-#define LedB D2
-#define LedC D3
+#define LedA 15
+#define LedB 13
+#define LedC 16
 
 Ticker ticker;
 

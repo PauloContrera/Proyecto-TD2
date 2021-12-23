@@ -1,0 +1,22 @@
+#include <main.h>
+
+void main(){
+  SET_TRIS_C(0xff0);
+   SET_TRIS_B(00001111);
+   SET_TRIS_A(00000000);
+   PORTB=0;
+   PORTA=0;
+   delay_ms(10);
+   int d[4];
+   while(TRUE)
+   {
+   numerico=numerico+0.03;
+   convertirdato(numerico);
+   muestra(dato);
+
+   }
+
+}
+
+
+

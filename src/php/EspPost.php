@@ -37,46 +37,12 @@ if ($con) {
             echo "Ups! El registro en la Base de datos no pudo subirse";
         }
 }
-    else{
-        echo $aux.$estado1.$estado2.$estado3;
+   else{
+        echo $estado1.$estado2.$estado3;
     }
-   /*if($Led ==true){
-        echo "Verdadero";
-    }else{
-        echo "Falso";
-    }*/
-    
+ 
     
 } else {
     //echo "Ups! No puedo conectarse con la Base de datos";   
 }}
 
-// if(isset($_POST['prender'])) {
-//     $Led =$_POST['prender'];
-//     date_default_timezone_set('america/argentina/buenos_aires');
-//     $fecha_actual = date("Y-m-d H:i:s");
-    
-//         $consulta = "INSERT INTO Led(LED, fecha) VALUES ('$Led', '$fecha_actual')";
-//         $resultado = mysqli_query($con, $consulta);
-//         if ($resultado){
-//             echo "El registro del fue exitoso";
-//         } else {
-//             echo "Ups! El registro en la Base de datos no pudo subirse";
-//         }
-//     echo '<script>   window.history.go(-1);</script>';
-// }
-//     if(isset($_POST['apagar'])) {
-//     $Led =$_POST['apagar'];
-//     date_default_timezone_set('america/argentina/buenos_aires');
-//     $fecha_actual = date("Y-m-d H:i:s");
-    
-//         $consulta = "INSERT INTO Led(LED, fecha) VALUES ('$Led', '$fecha_actual')";
-//         $resultado = mysqli_query($con, $consulta);
-//         if ($resultado){
-//             echo "El registro del fue exitoso";
-//         } else {
-//             echo "Ups! El registro en la Base de datos no pudo subirse";
-//         }
-//     echo '<script>   window.history.go(-1);</script>';
-// }
-?>

@@ -1,13 +1,13 @@
 #include <Adafruit_Sensor.h>
 #include "DHT.h"
 
-float t;
+float t=30;
 float h;
 float f;
 float hif;
 float hic;
 
-#define DHTPIN 12
+#define DHTPIN 14
 #define DHTTYPE DHT22 
 DHT dht(DHTPIN, DHTTYPE);
 

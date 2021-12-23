@@ -23,17 +23,17 @@
                     <h2>Control de luces</h2>
                     <div class="led-luces">
                         <h3>Luz numero 1</h3>
-                        <form action="src/php/EspPost.php" method="POST">
+                        <form action="src/php/Led.php" method="POST">
                             <input type="submit" name="prender1" value="Encender">
                             <input type="submit" name="apagar1" value="Apagar">
                         </form>
                         <h3>Luz numero 2</h3>
-                        <form action="src/php/EspPost.php" method="POST">
+                        <form action="src/php/Led.php" method="POST">
                             <input type="submit" name="prender2" value="Encender">
                             <input type="submit" name="apagar2" value="Apagar">
                         </form>
                         <h3>Luz numero 3</h3>
-                        <form action="src/php/EspPost.php" method="POST">
+                        <form action="src/php/Led.php" method="POST">
                             <input type="submit" name="prender3" value="Encender">
                             <input type="submit" name="apagar3" value="Apagar">
                         </form>
@@ -51,7 +51,7 @@
             <div class="redes">
                 <h3>En el icono de Github encontrar todo el codigo</h3>
             
-            <a href="https://api.whatsapp.com/send/?phone=5492634203042&text=Hola+Paulo.++Me+gustiria+hacerte+una+consulta">
+            <a href="https://github.com/PauloContrera/Proyecto-TD2">
                 <img src="src/images/icons/github.svg" alt=""></a>
             </div>
           </footer>

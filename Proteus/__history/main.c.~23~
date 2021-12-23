@@ -1,0 +1,35 @@
+#include <main.h>
+int d[5];
+float numero=20;
+void main(){
+  SET_TRIS_C(0xff0);
+   SET_TRIS_B(0X00f);
+   SET_TRIS_A(11000000);
+   PORTB=0;
+   PORTA=0;
+   delay_ms(10);
+   int d[4];
+   while(TRUE)
+   
+   {
+   //numerico=numerico+0.03;
+   //convertirdato(numerico);
+   //muestra(dato);
+   
+   
+   d[0]=bit_test(PORTB,0);
+   d[1]=bit_test(PORTB,1);
+   d[2]=bit_test(PORTB,2);
+   d[3]=bit_test(PORTB,3);
+   d[4]=bit_test(PORTA,6)
+   
+   numero=20+(d[3]*16+d[3]*8+d[2]*4+d[1]*2+d[0]*1)*0.625;
+   convertirdato(numero);
+   muestra(dato);
+   
+   }
+
+}
+
+
+
