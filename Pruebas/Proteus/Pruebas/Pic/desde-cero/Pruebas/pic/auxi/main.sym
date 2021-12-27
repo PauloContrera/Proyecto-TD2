@@ -1,0 +1,123 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+005-008 MAIN.temperatura
+009     lcd_init.i
+009     @PSTRINGCN_678.P1
+009-00C @PRINTF_L32D_678FPFPF.P2
+00A-00D lcd_init.LCD_INIT_STRING
+00A     @PSTRINGCN_678.@SCRATCH1
+00B     @PSTRINGCN_678.@SCRATCH2
+00D     @PRINTF_L32D_678FPFPF.P1
+00E     lcd_init.@SCRATCH1
+00E     @PRINTF_L32D_678FPFPF.@SCRATCH1
+00F     @PRINTF_L32D_678FPFPF.@SCRATCH2
+010     @PRINTF_L32D_678FPFPF.@SCRATCH3
+011     @PRINTF_L32D_678FPFPF.@SCRATCH4
+012     @PRINTF_L32D_678FPFPF.@SCRATCH5
+013     @PRINTF_L32D_678FPFPF.@SCRATCH6
+014     @PRINTF_L32D_678FPFPF.@SCRATCH7
+015     @PRINTF_L32D_678FPFPF.@SCRATCH8
+016-019 @MULFF.P1
+016-019 @DIV3232.P2
+016-019 @FTOSD.P3
+016     lcd_putc.c
+017     lcd_gotoxy.x
+017     @delay_ms1.P1
+018     lcd_gotoxy.y
+019     lcd_gotoxy.address
+01A-01D @MULFF.P1
+01A-01D @DIV3232.P2
+01A     lcd_gotoxy.@SCRATCH1
+01A     @FTOSD.@SCRATCH1
+01B     lcd_send_byte.address
+01C     lcd_send_byte.n
+01D     lcd_read_byte.low
+01D     lcd_send_byte.@SCRATCH1
+01E     lcd_send_nibble.n
+01E     lcd_read_byte.high
+01E     @MULFF.@SCRATCH1
+01E     @DIV3232.@SCRATCH1
+01F     lcd_read_nibble.n
+01F     lcd_read_byte.@SCRATCH1
+01F     @MULFF.@SCRATCH2
+01F     @DIV3232.@SCRATCH2
+020     lcd_read_nibble.@SCRATCH1
+020     @MULFF.@SCRATCH3
+020     @DIV3232.@SCRATCH3
+021     @DIV3232.@SCRATCH4
+022     @DIV3232.@SCRATCH5
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2_LOW
+FBB     CCP_2
+FBC     CCP_2_HIGH
+FBE     CCP_1_LOW
+FBE     CCP_1
+FBF     CCP_1_HIGH
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P1
+FE9-FEA @WRITE_PROGRAM_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P3
+FE9-FEA @WRITE_PACKED_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+000004  @const694.call
+000012  @delay_ms1
+00003A  lcd_send_nibble
+000078  lcd_read_nibble
+0000CA  lcd_read_byte
+000114  lcd_send_byte
+00015A  lcd_init
+0001D6  lcd_gotoxy
+0001F8  lcd_putc
+000248  @PSTRINGCN_678
+000268  @MULFF
+00035C  @FTOSD
+00039C  @DIV3232
+00042A  @PRINTF_L32D_678FPFPF
+0005A4  MAIN
+0005A4  @cinit1
+0005BA  @cinit2
+
+Project Directory:
+    P:\wamp64\www\Proyecto-TD2\Proteus\Pic\desde-cero\Pruebas\pic\auxi\
+
+Project Files:
+    main.c                                                  [28-sep.-21 23:16  CRC=31BF1408]
+    ..\..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F2550.h [15-ene.-18 15:57  CRC=9C52E89C]
+    ..\..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c [22-feb.-16 09:05  CRC=D1A6378A]
+
+Source signature=715E6BB8
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=14C8
+
+Units:
+    main (main)
+
+Compiler Settings:
+    Processor:      PIC18F2550
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   main.xsym
+    Errors:      main.err
+    Ext Symbols: main.esym
+    INHX32:      main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.ccspjt
+    Call Tree:   main.tre
+    Statistics:  main.STA

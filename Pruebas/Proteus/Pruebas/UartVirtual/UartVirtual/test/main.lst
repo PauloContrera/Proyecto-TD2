@@ -1,0 +1,430 @@
+CCS PCH C Compiler, Version 5.025, 61357               21-dic.-21 16:20
+
+               Filename:   P:\wamp64\www\Proyecto-TD2\Proteus\Pruebas\UartVirtual\UartVirtual\test\main.lst
+
+               ROM used:   522 bytes (2%)
+                           Largest free fragment is 32246
+               RAM used:   15 (1%) at main() level
+                           27 (1%) worst case
+               Stack used: 1 locations
+               Stack size: 31
+
+*
+0000:  GOTO   019C
+.................... #include <main.h> 
+.................... #include <18F2550.h> 
+.................... //////////// Standard Header file for the PIC18F2550 device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2013 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC18F2550 
+0004:  CLRF   FF7
+0006:  ADDLW  14
+0008:  MOVWF  FF6
+000A:  MOVLW  00
+000C:  ADDWFC FF7,F
+000E:  TBLRD*+
+0010:  MOVF   FF5,W
+0012:  RETURN 0
+0014:  DATA 00,04
+0016:  DATA 02,06
+0018:  DATA 01,05
+001A:  DATA 03,07
+*
+0046:  MOVF   19,W
+0048:  CLRF   01
+004A:  SUBWF  18,W
+004C:  BC    0054
+004E:  MOVFF  18,00
+0052:  BRA    006C
+0054:  CLRF   00
+0056:  MOVLW  08
+0058:  MOVWF  1A
+005A:  RLCF   18,F
+005C:  RLCF   00,F
+005E:  MOVF   19,W
+0060:  SUBWF  00,W
+0062:  BTFSC  FD8.0
+0064:  MOVWF  00
+0066:  RLCF   01,F
+0068:  DECFSZ 1A,F
+006A:  BRA    005A
+006C:  RETURN 0
+006E:  MOVLW  20
+0070:  BTFSS  13.4
+0072:  MOVLW  30
+0074:  MOVWF  14
+0076:  MOVFF  12,00
+007A:  BTFSS  12.7
+007C:  BRA    008E
+007E:  COMF   00,F
+0080:  INCF   00,F
+0082:  MOVFF  00,12
+0086:  MOVLW  2D
+0088:  MOVWF  14
+008A:  BSF    13.7
+008C:  BSF    13.0
+008E:  MOVF   01,W
+0090:  MOVFF  12,18
+0094:  MOVLW  64
+0096:  MOVWF  19
+0098:  RCALL  0046
+009A:  MOVFF  00,12
+009E:  MOVLW  30
+00A0:  ADDWF  01,W
+00A2:  MOVWF  15
+00A4:  MOVFF  12,18
+00A8:  MOVLW  0A
+00AA:  MOVWF  19
+00AC:  RCALL  0046
+00AE:  MOVLW  30
+00B0:  ADDWF  00,W
+00B2:  MOVWF  17
+00B4:  MOVLW  30
+00B6:  ADDWF  01,W
+00B8:  MOVWF  16
+00BA:  MOVFF  14,00
+00BE:  MOVLW  30
+00C0:  SUBWF  15,W
+00C2:  BZ    00CC
+00C4:  BSF    13.1
+00C6:  BTFSC  13.7
+00C8:  BSF    13.2
+00CA:  BRA    00F0
+00CC:  MOVFF  14,15
+00D0:  MOVLW  20
+00D2:  MOVWF  14
+00D4:  MOVLW  30
+00D6:  SUBWF  16,W
+00D8:  BZ    00E2
+00DA:  BSF    13.0
+00DC:  BTFSC  13.7
+00DE:  BSF    13.1
+00E0:  BRA    00F0
+00E2:  BTFSS  FD8.2
+00E4:  BSF    13.0
+00E6:  BNZ   00F0
+00E8:  MOVFF  15,16
+00EC:  MOVLW  20
+00EE:  MOVWF  15
+00F0:  BTFSC  13.2
+00F2:  BRA    00FE
+00F4:  BTFSC  13.1
+00F6:  BRA    0106
+00F8:  BTFSC  13.0
+00FA:  BRA    010E
+00FC:  BRA    0116
+00FE:  MOVF   14,W
+0100:  BTFSS  F9E.4
+0102:  BRA    0100
+0104:  MOVWF  FAD
+0106:  MOVF   15,W
+0108:  BTFSS  F9E.4
+010A:  BRA    0108
+010C:  MOVWF  FAD
+010E:  MOVF   16,W
+0110:  BTFSS  F9E.4
+0112:  BRA    0110
+0114:  MOVWF  FAD
+0116:  MOVF   17,W
+0118:  BTFSS  F9E.4
+011A:  BRA    0118
+011C:  MOVWF  FAD
+011E:  GOTO   01F6 (RETURN)
+*
+0172:  ADDWF  FE8,W
+0174:  CLRF   FF7
+0176:  RLCF   FF7,F
+0178:  ADDLW  8D
+017A:  MOVWF  FF6
+017C:  MOVLW  01
+017E:  ADDWFC FF7,F
+0180:  TBLRD*-
+0182:  MOVF   FF5,W
+0184:  MOVWF  FFA
+0186:  TBLRD*
+0188:  MOVF   FF5,W
+018A:  MOVWF  FF9
+018C:  DATA 68,01
+018E:  DATA 30,01
+0190:  DATA 38,01
+0192:  DATA 40,01
+0194:  DATA 48,01
+0196:  DATA 50,01
+0198:  DATA 58,01
+019A:  DATA 60,01
+....................  
+.................... #list 
+....................  
+.................... #device ADC=10 
+.................... #FUSES XT, NOWDT, PUT, NOMCLR,BROWNOUT,NOLVP                    //No Watch Dog Timer 
+.................... //#use delay(internal=4MHz) 
+.................... #use delay(internal=4Mhz,clock_out) 
+*
+001C:  CLRF   FEA
+001E:  MOVLW  12
+0020:  MOVWF  FE9
+0022:  MOVF   FEF,W
+0024:  BZ    0042
+0026:  MOVLW  01
+0028:  MOVWF  01
+002A:  CLRF   00
+002C:  DECFSZ 00,F
+002E:  BRA    002C
+0030:  DECFSZ 01,F
+0032:  BRA    002A
+0034:  MOVLW  4A
+0036:  MOVWF  00
+0038:  DECFSZ 00,F
+003A:  BRA    0038
+003C:  BRA    003E
+003E:  DECFSZ FEF,F
+0040:  BRA    0026
+0042:  GOTO   01EC (RETURN)
+....................  
+....................  
+.................... BYTE CONST Display[10]={0x020,0x073,0x082,0x042,0x051,0x044,0x004,0x072,0x000,0x050}; 
+.................... BYTE CONST DisplayB[10]={0x020,0x070,0x080,0x040,0x050,0x040,0x000,0x070,0x000,0x050}; 
+.................... BYTE CONST ColumnasA[4]={0x024,0x010,0x005,0x00C}; 
+.................... //BYTE CONST ColumnasB[4]={0x004,0x000,0x004,0x014}; 
+....................  
+....................  
+.................... BYTE CONST Leds[8]={0x000,0x004,0x002,0x006,0x001,0x005,0x003,0x007}; 
+.................... int dato[4]; 
+.................... float numerico=18.76 ; 
+....................  
+.................... #DEFINE LED PORTB,0 
+.................... #byte PORTC= 0xf82 
+.................... #byte PORTB= 0xf81 
+.................... #byte PORTA= 0xf80 
+....................  
+.................... #byte TRISA=0xf92  
+....................  
+....................  
+.................... void muestra(int dato[4]){ 
+.................... for (int i=0;i<4;i++) { 
+....................          PORTA=ColumnasA[i]; 
+....................          //PORTB=ColumnasB[i]; 
+....................          PORTC=Display[dato[i]]; 
+....................          PORTB=DisplayB[dato[i]]; 
+....................          DELAY_MS(10); 
+....................    } 
+....................    return; 
+.................... } 
+.................... void convertirdato(float numero){ 
+....................  
+.................... int cifras[10]; 
+....................    int cifras2[10]; 
+....................    int i=0; 
+....................    int j=0; 
+....................    int aux=0; 
+....................    int aux2=0; 
+....................     
+....................    aux=numero; 
+....................    aux2=(numero*100)-(aux*100); 
+....................  
+....................    while (aux2>0) { 
+....................       cifras2[j]=aux2%10; 
+....................       aux2=aux2/10; 
+....................       j++; 
+....................    } 
+....................    while (aux>0) { 
+....................       cifras[i]=aux%10; 
+....................       aux=aux/10; 
+....................       i++; 
+....................    } 
+....................    dato[0]=cifras[1]; 
+....................    dato[1]=cifras[0]; 
+....................    dato[2]=cifras2[1]; 
+....................    dato[3]=cifras2[0]; 
+....................  
+....................    return; 
+.................... } 
+.................... int convierte(char c){ 
+.................... switch (c) { 
+*
+0122:  MOVLW  30
+0124:  SUBWF  12,W
+0126:  ADDLW  F8
+0128:  BC    016E
+012A:  ADDLW  08
+012C:  GOTO   0172
+....................    case '1': return 1; 
+0130:  MOVLW  01
+0132:  MOVWF  01
+0134:  BRA    016E
+....................        
+....................       break; 
+0136:  BRA    016E
+....................    case '2': return 2; 
+0138:  MOVLW  02
+013A:  MOVWF  01
+013C:  BRA    016E
+....................        
+....................       break; 
+013E:  BRA    016E
+....................   case '3': return 3; 
+0140:  MOVLW  03
+0142:  MOVWF  01
+0144:  BRA    016E
+....................        
+....................       break; 
+0146:  BRA    016E
+....................    case '4': return 4; 
+0148:  MOVLW  04
+014A:  MOVWF  01
+014C:  BRA    016E
+....................        
+....................       break; 
+014E:  BRA    016E
+....................    case '5': return 5; 
+0150:  MOVLW  05
+0152:  MOVWF  01
+0154:  BRA    016E
+....................        
+....................       break; 
+0156:  BRA    016E
+....................    case '6': return 6; 
+0158:  MOVLW  06
+015A:  MOVWF  01
+015C:  BRA    016E
+....................        
+....................       break; 
+015E:  BRA    016E
+....................    case '7': return 7; 
+0160:  MOVLW  07
+0162:  MOVWF  01
+0164:  BRA    016E
+....................        
+....................       break; 
+0166:  BRA    016E
+....................    case '0': return 0; 
+0168:  MOVLW  00
+016A:  MOVWF  01
+016C:  BRA    016E
+....................        
+....................       break; 
+....................    //default: return 7; 
+....................        
+....................    }; 
+016E:  GOTO   01FC (RETURN)
+.................... } 
+....................  
+.................... //74880 
+....................  #use rs232(baud=9600, xmit=PIN_c6,rcv=PIN_c7,stream=PiC) 
+....................  #use rs232(baud=9600,xmit=PIN_c4,rcv=PIN_c5,stream=PC) 
+.................... //int dato[4]={5,9,6,3}; 
+....................  
+.................... /*const _myAdress=0x04; 
+....................  
+.................... void I2C_Send(unsigned short _adress,unsigned short c1,unsigned short c2){ 
+.................... I2C1_Start(); 
+.................... I2C1_Wr(_adress); 
+.................... I2C1_Wr(c1); 
+.................... I2Cl_Wr(c2); 
+.................... I2C1_Stop(); 
+.................... Delay_ms(10); 
+.................... } 
+.................... */ 
+.................... int o=1; 
+.................... char a; 
+.................... void main(){ 
+*
+019C:  CLRF   FF8
+019E:  BCF    FD0.7
+01A0:  MOVLW  60
+01A2:  MOVWF  FD3
+01A4:  MOVF   FD3,W
+01A6:  MOVLW  7B
+01A8:  MOVWF  0B
+01AA:  MOVLW  14
+01AC:  MOVWF  0A
+01AE:  MOVLW  16
+01B0:  MOVWF  09
+01B2:  MOVLW  83
+01B4:  MOVWF  08
+01B6:  BCF    FB8.3
+01B8:  MOVLW  19
+01BA:  MOVWF  FAF
+01BC:  MOVLW  A6
+01BE:  MOVWF  FAC
+01C0:  MOVLW  90
+01C2:  MOVWF  FAB
+01C4:  BCF    F94.4
+01C6:  BSF    F8B.4
+01C8:  MOVLW  01
+01CA:  MOVWF  0C
+01CC:  MOVF   FC1,W
+01CE:  ANDLW  C0
+01D0:  IORLW  0F
+01D2:  MOVWF  FC1
+01D4:  MOVLW  07
+01D6:  MOVWF  FB4
+....................   SET_TRIS_C(0xff0); 
+01D8:  MOVLW  F0
+01DA:  MOVWF  F94
+....................    SET_TRIS_B(00000000); 
+01DC:  MOVLW  00
+01DE:  MOVWF  F93
+....................    SET_TRIS_A(00000000); 
+01E0:  MOVWF  F92
+....................    PORTB=0; 
+01E2:  CLRF   F81
+....................    PORTA=0; 
+01E4:  CLRF   F80
+....................    //I2C1_Init(100000); 
+....................    delay_ms(10); 
+01E6:  MOVLW  0A
+01E8:  MOVWF  12
+01EA:  BRA    001C
+....................    int d[4]; 
+....................    while(TRUE) 
+....................    { 
+....................    //numerico=numerico+0.03; 
+....................    //convertirdato(numerico); 
+....................    ///muestra(dato); 
+....................    //fprintf(PiC,"Dato: %c%c%c\n\n",c[0],c[1],c[2]); //Manda el caracter al segundo PIC 
+....................   // a=fgetc(PiC); 
+....................     fprintf(PiC,"%d",o); //Manda el caracter al segundo PIC 
+01EC:  MOVFF  0C,12
+01F0:  MOVLW  18
+01F2:  MOVWF  13
+01F4:  BRA    006E
+....................    //fprintf(PiC,"\n%d Hola-->",o); //Manda el caracter al segundo PIC 
+....................     
+....................    //c[1]=fgetc(PiC);  
+....................    //c[2]=fgetc(PiC);  
+....................    //fprintf(PiC,"\n%d Hola-->",o); //Manda el caracter al segundo PIC 
+....................    
+....................    PORTB=Leds[convierte(a)]; 
+01F6:  MOVFF  0D,12
+01FA:  BRA    0122
+01FC:  CLRF   03
+01FE:  MOVF   01,W
+0200:  RCALL  0004
+0202:  MOVWF  01
+0204:  MOVWF  F81
+0206:  BRA    01EC
+....................     
+....................    } 
+....................  
+.................... } 
+....................  
+0208:  SLEEP 
+....................  
+....................  
+
+Configuration Fuses:
+   Word  1: C93F   PLL12 CPUDIV4 USBDIV INTRC FCMEN IESO
+   Word  2: 1E3E   PUT BROWNOUT BORV21 VREGEN NOWDT WDT32768
+   Word  3: 0700   CCP2C1 PBADEN LPT1OSC NOMCLR
+   Word  4: 0081   STVREN NOLVP NOXINST NODEBUG
+   Word  5: C00F   NOPROTECT NOCPB NOCPD
+   Word  6: E00F   NOWRT NOWRTC NOWRTB NOWRTD
+   Word  7: 400F   NOEBTR NOEBTRB

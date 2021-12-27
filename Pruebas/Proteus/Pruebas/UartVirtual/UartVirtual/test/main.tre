@@ -1,0 +1,10 @@
+ÀÄmain
+   ÀÄMAIN  0/110  Ram=1
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄ@delay_ms1  0/42  Ram=1
+      ÃÄ@PRINTF_D_9600_31766_31767  0/180  Ram=6
+      ³  ÃÄ@DIV88  0/40  Ram=3
+      ³  ÀÄ@DIV88  0/40  Ram=3
+      ÃÄconvierte  0/80  Ram=1
+      ³  ÀÄ@goto10676  0/42  Ram=0
+      ÀÄ@const642  0/24  Ram=0

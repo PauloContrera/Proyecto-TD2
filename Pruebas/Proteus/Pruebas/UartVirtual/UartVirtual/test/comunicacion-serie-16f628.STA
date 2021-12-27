@@ -1,0 +1,48 @@
+
+ROM used:   330/32768 (1%)
+            330/32768 (1%) including unused fragments
+
+            0.4 Average locations per line
+            165.0 Average locations per statement
+
+RAM used:   5/2048 (0%) at main() level
+            14/2048 (1%) worst case
+
+Stack used: 1 worst case (1 in main + 0 for interrupts)
+Stack size: 31
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   10     2 100  comunicacion-serie-16f628.c
+  775     0   0  ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18f2550.h
+----- -----
+  785     2 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+0     64  10    0     47  1.8  main
+0      8   1    0             @const639
+0     40   6    3             @DIV88
+0    180  27    6             @PRINTF_D_300_31766_31767
+0     34   5    3             @PSTRINGCN_300_31766_31767
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               1
+    Statements              2
+    Comments                145
+    Volume (V)              53
+    Difficulty (D)          1.0
+    Effort to implement (E) 55
+    Time to implement (T)   0 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   1
+    Maintainability (MI)    129
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00002     4  0  
+00004-07FFE   326  32438  
+
+
+

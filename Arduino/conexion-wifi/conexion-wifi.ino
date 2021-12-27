@@ -12,17 +12,17 @@ void setup() {
 
 
 void loop() {
-  Serial.println("vamos a leer");
+  //Serial.println("vamos a leer");
   LecturaTH();
-  Serial.println("vamos a mandar");
+  //Serial.println("vamos a mandar");
   EnvioDatos();
   
-  Serial.println("vamos a pasar los datos");
+  //Serial.println("vamos a pasar los datos");
   numero=t;
   aux2=convertirDato(numero);
   pasarbinario(aux2);
  
-  Serial.println(aux2);
+  //Serial.println(aux2);
   for (int i=0;i<5;i++) {
         salidas(d[i],sal[i]);
   }

@@ -1,0 +1,88 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004-007 dato
+008-00B numerico
+00C     o
+00D     a
+00E-011 MAIN.d
+012     convierte.c
+012     @PRINTF_D_9600_31766_31767.P1
+012     @delay_ms1.P2
+012     MAIN.@SCRATCH1
+013     @PRINTF_D_9600_31766_31767.P1
+014     @PRINTF_D_9600_31766_31767.@SCRATCH1
+015     @PRINTF_D_9600_31766_31767.@SCRATCH2
+016     @PRINTF_D_9600_31766_31767.@SCRATCH3
+017     @PRINTF_D_9600_31766_31767.@SCRATCH4
+018     @DIV88.P1
+019     @DIV88.P1
+01A     @DIV88.@SCRATCH1
+F80     PORTA
+F81     PORTB
+F82     PORTC
+F92     TRISA
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2_LOW
+FBB     CCP_2
+FBC     CCP_2_HIGH
+FBE     CCP_1
+FBE     CCP_1_LOW
+FBF     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P1
+FE9-FEA @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P3
+FE9-FEA @WRITE_PROGRAM_MEMORY.P4
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+000004  Leds.call
+000014  Leds.data
+00001C  @delay_ms1
+000046  @DIV88
+00006E  @PRINTF_D_9600_31766_31767
+000122  convierte
+000172  @goto10676
+00019C  @cinit1
+00019C  MAIN
+0001D8  @cinit2
+
+Project Directory:
+    P:\wamp64\www\Proyecto-TD2\Proteus\Pruebas\UartVirtual\UartVirtual\test\
+
+Project Files:
+    main.c                                                  [21-dic.-21 16:20  CRC=C644F03D]
+    main.h                                                  [20-dic.-21 20:02  CRC=7C8443EA]
+    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F2550.h [18-abr.-14 16:56  CRC=63CCCE37]
+
+Source signature=0A62D095
+
+Units:
+    main (main)
+
+Compiler Settings:
+    Processor:      PIC18F2550
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   main.xsym
+    Errors:      main.h.err
+    Ext Symbols: main.esym
+    INHX32:      main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.ccspjt
+    Call Tree:   main.tre
+    Statistics:  main.STA

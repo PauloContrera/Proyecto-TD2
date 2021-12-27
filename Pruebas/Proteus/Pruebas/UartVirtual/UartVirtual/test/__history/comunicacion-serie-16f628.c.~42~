@@ -1,0 +1,11 @@
+#include <18f2550.h>
+#use delay(clock=400000)
+#use rs232(baud=300, xmit=PIN_c6,rcv=PIN_c7,stream=PiC)
+
+void main()
+{
+#byte a=1100010011001111
+#byte b=1100000001111
+#byte c=1010000011100101
+#byte d=((a&b)|c)^(4<<4);
+}

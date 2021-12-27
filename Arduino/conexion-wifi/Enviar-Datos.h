@@ -20,7 +20,7 @@ void EnvioDatos(){
       Serial.println("Codigo HTTP: "+ String(codigo_respuesta));
         if (codigo_respuesta == 200){
           String cuerpo_respuesta = http.getString();
-          Serial.println("El servidor respondio: ");
+          //Serial.println("El servidor respondio: ");
           Serial.println(cuerpo_respuesta);
           if(aux>=61){
             aux=0;
@@ -29,11 +29,11 @@ void EnvioDatos(){
           String EstadoLED1A ="Apagar11";
           if(EstadoLED1E==cuerpo_respuesta){
             digitalWrite(LedA,HIGH);
-            Serial.println("A1");
+            //Serial.println("A1");
           }
           if(EstadoLED1A==cuerpo_respuesta){
             digitalWrite(LedA,LOW);
-            Serial.println("A0");
+            //Serial.println("A0");
           }
 
           
@@ -41,21 +41,21 @@ void EnvioDatos(){
           String EstadoLED2A ="1Apagar1";
           if(EstadoLED2E==cuerpo_respuesta){
             digitalWrite(LedB,HIGH);
-            Serial.println("B1");
+            //Serial.println("B1");
           }
           if(EstadoLED2A==cuerpo_respuesta){
             digitalWrite(LedB,LOW);
-            Serial.println("B0");
+            //Serial.println("B0");
           }
           String EstadoLED3E="11Encender";
           String EstadoLED3A ="11Apagar";
           if(EstadoLED3E==cuerpo_respuesta){
             digitalWrite(LedC,HIGH);
-            Serial.println("C1");
+            //Serial.println("C1");
           }
           if(EstadoLED3A==cuerpo_respuesta){
             digitalWrite(LedC,LOW);
-            Serial.println("C0");
+            //Serial.println("C0");
           }
           }
         

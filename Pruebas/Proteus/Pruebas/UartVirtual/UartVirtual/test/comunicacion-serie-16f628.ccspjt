@@ -1,0 +1,70 @@
+[PROJECT]
+Target=comunicacion-serie-16f628.hex
+Processor_Text=PIC18F2550
+CCSVersion=5.025
+Compiler=PCH
+[Target Data]
+FileList=comunicacion-serie-16f628.c
+[comunicacion-serie-16f628.c]
+Type=4
+[mru-list]
+1=comunicacion-serie-16f628.c
+
+[Opened Files]
+1=comunicacion-serie-16f628.c
+2=main.c
+3=
+
+[ProjectLog]
+Days=5
+D1=01-12-2021
+D1_L=2
+D1_L1=[13753]Stopped Editing.
+TotalEdit=23
+TotalDebug=0
+D1_E=6
+D1_D=0
+D1_L2=[14207]Project Closed.
+D2=02-12-2021
+D2_L=12
+D2_L1=[6423]Project Opened.
+D2_L2=[8010]Started Editing.
+D2_L3=[8489]Stopped Editing.
+D2_L4=[8598]Started Editing.
+D2_L5=[9069]Stopped Editing.
+D2_L6=[9082]Started Editing.
+D2_L7=[9384]Stopped Editing.
+D2_E=8
+D2_D=0
+D2_L8=[12272]Project Closed.
+D2_L9=[18661]Project Opened.
+D2_L10=[19287]Started Editing.
+D2_L11=[19703]Stopped Editing.
+D2_L12=[20102]Project Closed.
+D3=06-12-2021
+D3_L=4
+D3_L1=[42152]Project Opened.
+D3_L2=[42174]Started Editing.
+D3_L3=[42514]Stopped Editing.
+D3_E=6
+D3_D=0
+D3_L4=[42514]Project Closed.
+D4=11-12-2021
+D4_L=4
+D4_L1=[44116]Project Opened.
+D4_L2=[44327]Started Editing.
+D4_L3=[44385]Stopped Editing.
+D4_E=1
+D4_D=0
+D4_L4=[44385]Project Closed.
+D5=14-12-2021
+D5_L=4
+D5_L1=[52241]Project Opened.
+D5_L2=[52282]Started Editing.
+D5_L3=[52368]Stopped Editing.
+D5_E=2
+D5_D=0
+D5_L4=[52368]Project Closed.
+[Units]
+Count=1
+1=comunicacion-serie-16f628 (main)

@@ -1,0 +1,13 @@
+#include <18f2550.h>
+#use delay(clock=400000)
+#use rs232(baud=600, xmit=PIN_c6,rcv=PIN_c7)
+
+void main()
+{
+char a='a';
+
+ for(;;)
+ {
+  fprintf("a"); //Manda el caracter al segundo PIC
+ }
+}

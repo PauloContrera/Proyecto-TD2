@@ -1,0 +1,37 @@
+#include <main.h>
+int contador=0;
+int col=0;
+
+BYTE CONST Display[10]={0x080,0x0F1,0x044,0x060,0x031,0x022,0x002,0x0F0,0x000,0x030};
+BYTE CONST Columnas[5]={0x010,0x020,0x040,0x080};
+void main()
+{
+   SET_TRIS_C(0000000);
+   SET_TRIS_B(00000000);
+   PORTB=0;
+   PORTA=0;
+   while(TRUE)
+   {
+   contador=0;
+   col=0;
+   while(col<4){
+   PORTB=Columnas[col];
+      WHILE(contador<10)
+      {
+      PORTC=Display[contador];
+      contador++;
+      DELAY_MS(100);
+      }
+      col++;
+      }
+   
+   
+      /*BIT_SET(LED);
+      DELAY_MS(100);
+      BIT_CLEAR(LED);
+      DELAY_MS(100);*/
+
+      //TODO: User Code
+   }
+
+}

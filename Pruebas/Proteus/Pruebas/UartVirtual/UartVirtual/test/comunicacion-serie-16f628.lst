@@ -1,0 +1,192 @@
+CCS PCH C Compiler, Version 5.025, 61357               14-dic.-21 14:32
+
+               Filename:   P:\wamp64\www\Proyecto-TD2\Proteus\Pruebas\UartVirtual\UartVirtual\test\comunicacion-serie-16f628.lst
+
+               ROM used:   330 bytes (1%)
+                           Largest free fragment is 32438
+               RAM used:   5 (0%) at main() level
+                           14 (1%) worst case
+               Stack used: 1 locations
+               Stack size: 31
+
+*
+0000:  GOTO   010A
+.................... #include <18f2550.h> 
+.................... //////////// Standard Header file for the PIC18F2550 device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2013 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC18F2550 
+0004:  DATA 25,64
+0006:  DATA 48,6F
+0008:  DATA 6C,61
+000A:  DATA 00,00
+000C:  MOVF   0C,W
+000E:  CLRF   01
+0010:  SUBWF  0B,W
+0012:  BC    001A
+0014:  MOVFF  0B,00
+0018:  BRA    0032
+001A:  CLRF   00
+001C:  MOVLW  08
+001E:  MOVWF  0D
+0020:  RLCF   0B,F
+0022:  RLCF   00,F
+0024:  MOVF   0C,W
+0026:  SUBWF  00,W
+0028:  BTFSC  FD8.0
+002A:  MOVWF  00
+002C:  RLCF   01,F
+002E:  DECFSZ 0D,F
+0030:  BRA    0020
+0032:  RETURN 0
+0034:  MOVLW  20
+0036:  BTFSS  06.4
+0038:  MOVLW  30
+003A:  MOVWF  07
+003C:  MOVFF  05,00
+0040:  BTFSS  05.7
+0042:  BRA    0054
+0044:  COMF   00,F
+0046:  INCF   00,F
+0048:  MOVFF  00,05
+004C:  MOVLW  2D
+004E:  MOVWF  07
+0050:  BSF    06.7
+0052:  BSF    06.0
+0054:  MOVF   01,W
+0056:  MOVFF  05,0B
+005A:  MOVLW  64
+005C:  MOVWF  0C
+005E:  RCALL  000C
+0060:  MOVFF  00,05
+0064:  MOVLW  30
+0066:  ADDWF  01,W
+0068:  MOVWF  08
+006A:  MOVFF  05,0B
+006E:  MOVLW  0A
+0070:  MOVWF  0C
+0072:  RCALL  000C
+0074:  MOVLW  30
+0076:  ADDWF  00,W
+0078:  MOVWF  0A
+007A:  MOVLW  30
+007C:  ADDWF  01,W
+007E:  MOVWF  09
+0080:  MOVFF  07,00
+0084:  MOVLW  30
+0086:  SUBWF  08,W
+0088:  BZ    0092
+008A:  BSF    06.1
+008C:  BTFSC  06.7
+008E:  BSF    06.2
+0090:  BRA    00B6
+0092:  MOVFF  07,08
+0096:  MOVLW  20
+0098:  MOVWF  07
+009A:  MOVLW  30
+009C:  SUBWF  09,W
+009E:  BZ    00A8
+00A0:  BSF    06.0
+00A2:  BTFSC  06.7
+00A4:  BSF    06.1
+00A6:  BRA    00B6
+00A8:  BTFSS  FD8.2
+00AA:  BSF    06.0
+00AC:  BNZ   00B6
+00AE:  MOVFF  08,09
+00B2:  MOVLW  20
+00B4:  MOVWF  08
+00B6:  BTFSC  06.2
+00B8:  BRA    00C4
+00BA:  BTFSC  06.1
+00BC:  BRA    00CC
+00BE:  BTFSC  06.0
+00C0:  BRA    00D4
+00C2:  BRA    00DC
+00C4:  MOVF   07,W
+00C6:  BTFSS  F9E.4
+00C8:  BRA    00C6
+00CA:  MOVWF  FAD
+00CC:  MOVF   08,W
+00CE:  BTFSS  F9E.4
+00D0:  BRA    00CE
+00D2:  MOVWF  FAD
+00D4:  MOVF   09,W
+00D6:  BTFSS  F9E.4
+00D8:  BRA    00D6
+00DA:  MOVWF  FAD
+00DC:  MOVF   0A,W
+00DE:  BTFSS  F9E.4
+00E0:  BRA    00DE
+00E2:  MOVWF  FAD
+00E4:  GOTO   0138 (RETURN)
+00E8:  TBLRD*+
+00EA:  MOVFF  FF6,06
+00EE:  MOVFF  FF7,07
+00F2:  MOVF   FF5,W
+00F4:  BTFSS  F9E.4
+00F6:  BRA    00F4
+00F8:  MOVWF  FAD
+00FA:  MOVFF  06,FF6
+00FE:  MOVFF  07,FF7
+0102:  DECFSZ 05,F
+0104:  BRA    00E8
+0106:  GOTO   0146 (RETURN)
+....................  
+.................... #list 
+....................  
+.................... #use delay(clock=400000) 
+.................... #use rs232(baud=300, xmit=PIN_c6,rcv=PIN_c7,stream=PiC) 
+.................... int i=0; 
+.................... void main() 
+010A:  CLRF   FF8
+010C:  BCF    FD0.7
+010E:  BSF    FB8.3
+0110:  MOVLW  4C
+0112:  MOVWF  FAF
+0114:  MOVLW  01
+0116:  MOVWF  FB0
+0118:  MOVLW  A6
+011A:  MOVWF  FAC
+011C:  MOVLW  90
+011E:  MOVWF  FAB
+0120:  CLRF   04
+0122:  MOVF   FC1,W
+0124:  ANDLW  C0
+0126:  IORLW  0F
+0128:  MOVWF  FC1
+012A:  MOVLW  07
+012C:  MOVWF  FB4
+.................... { 
+.................... fprintf(PiC,"%dHola",i); //Manda el caracter al segundo PIC 
+012E:  MOVFF  04,05
+0132:  MOVLW  18
+0134:  MOVWF  06
+0136:  BRA    0034
+0138:  MOVLW  06
+013A:  MOVWF  FF6
+013C:  MOVLW  00
+013E:  MOVWF  FF7
+0140:  MOVLW  04
+0142:  MOVWF  05
+0144:  BRA    00E8
+.................... i++; 
+0146:  INCF   04,F
+.................... } 
+0148:  SLEEP 
+
+Configuration Fuses:
+   Word  1: CF3F   PLL12 CPUDIV4 USBDIV FCMEN IESO
+   Word  2: 1E3E   PUT BROWNOUT BORV21 VREGEN NOWDT WDT32768
+   Word  3: 8700   CCP2C1 PBADEN LPT1OSC MCLR
+   Word  4: 0081   STVREN NOLVP NOXINST NODEBUG
+   Word  5: C00F   NOPROTECT NOCPB NOCPD
+   Word  6: E00F   NOWRT NOWRTC NOWRTB NOWRTD
+   Word  7: 400F   NOEBTR NOEBTRB

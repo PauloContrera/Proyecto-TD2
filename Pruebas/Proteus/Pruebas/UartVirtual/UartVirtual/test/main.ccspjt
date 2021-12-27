@@ -1,0 +1,102 @@
+[PROJECT]
+Target=main.hex
+Processor_Text=PIC18F2550
+CCSVersion=5.025
+Compiler=PCH
+[Target Data]
+FileList=main.c
+[main.c]
+Type=4
+[mru-list]
+1=main.c
+
+[ProjectLog]
+Days=5
+D1=11-12-2021
+D1_L=5
+D1_L1=[46163]Started Editing.
+D1_L2=[46857]Stopped Editing.
+D1_L3=[46896]Started Editing.
+D1_L4=[47170]Stopped Editing.
+TotalEdit=79
+TotalDebug=0
+D1_E=12
+D1_D=0
+D1_L5=[47170]Project Closed.
+D2=14-12-2021
+D2_L=18
+D2_L1=[52377]Project Opened.
+D2_L2=[52398]Started Editing.
+D2_L3=[52930]Stopped Editing.
+D2_L4=[53382]Started Editing.
+D2_L5=[53977]Stopped Editing.
+D2_L6=[53998]Started Editing.
+D2_L7=[54298]Stopped Editing.
+D2_L8=[62049]Started Editing.
+D2_L9=[62349]Stopped Editing.
+D2_L10=[64828]Started Editing.
+D2_L11=[65168]Stopped Editing.
+D2_L12=[66095]Started Editing.
+D2_L13=[66471]Stopped Editing.
+D2_L14=[66534]Started Editing.
+D2_L15=[66876]Stopped Editing.
+D2_L16=[67051]Started Editing.
+D2_L17=[67551]Stopped Editing.
+D2_E=15
+D2_D=0
+D2_L18=[68497]Project Closed.
+D3=16-12-2021
+D3_L=6
+D3_L1=[63614]Project Opened.
+D3_L2=[64947]Started Editing.
+D3_L3=[65525]Stopped Editing.
+D3_L4=[65677]Started Editing.
+D3_L5=[66496]Stopped Editing.
+D3_L6=[67748]Project Closed.
+D4=18-12-2021
+D4_L=13
+D4_L1=[61923]Project Opened.
+D4_L2=[61935]Started Editing.
+D4_L3=[62368]Stopped Editing.
+D4_L4=[62388]Started Editing.
+D4_L5=[63072]Stopped Editing.
+D4_L6=[63163]Started Editing.
+D4_L7=[63238]Project Closed.
+D4_L8=[64234]Project Opened.
+D4_L9=[64411]Started Editing.
+D4_L10=[64795]Stopped Editing.
+D4_L11=[64844]Started Editing.
+D4_L12=[65070]Stopped Editing.
+D4_E=6
+D4_D=0
+D4_L13=[65070]Project Closed.
+D5=20-12-2021
+D5_L=16
+D5_L1=[64646]Project Opened.
+D5_L2=[64725]Started Editing.
+D5_L3=[66438]Stopped Editing.
+D5_L4=[66584]Started Editing.
+D5_L5=[67180]Stopped Editing.
+D5_L6=[67648]Started Editing.
+D5_L7=[68563]Stopped Editing.
+D5_L8=[69295]Started Editing.
+D5_L9=[69667]Stopped Editing.
+D5_E=46
+D5_D=0
+D5_L10=[69685]Project Closed.
+D5_L11=[69752]Project Opened.
+D5_L12=[69793]Started Editing.
+D5_L13=[70095]Stopped Editing.
+D5_L14=[71799]Started Editing.
+D5_L15=[72452]Stopped Editing.
+D5_L16=[73346]Project Closed.
+
+[Opened Files]
+1=main.c
+2=main.h
+3=
+4=
+5=
+[Units]
+Count=1
+1=main (main)

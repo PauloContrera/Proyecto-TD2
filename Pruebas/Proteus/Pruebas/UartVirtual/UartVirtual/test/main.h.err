@@ -1,0 +1,5 @@
+>>> Warning 202 "P:\wamp64\www\Proyecto-TD2\Proteus\Pruebas\UartVirtual\UartVirtual\test\main.h" Line 16(7,15): Variable never used:   numerico
+>>> Warning 202 "main.c" Line 28(8,9): Variable never used:   d
+      Memory usage:   ROM=2%      RAM=1% - 1%
+      0 Errors,  2 Warnings.
+Build Successful.
